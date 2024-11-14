@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmodrzej <dmodrzej@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 20:07:24 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/11/09 21:09:07 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/11/14 19:44:20 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ void Contact::setPhoneNumber(const std::string &phoneNumber)
             throw std::invalid_argument("Phone number must contain only digits");
         }
     }
+	if (phoneNumber.empty())
+	{
+		throw std::invalid_argument("Phone number cannot be empty");
+	}
     this->phoneNumber = phoneNumber;
 }
 
